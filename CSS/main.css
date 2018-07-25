@@ -1,0 +1,390 @@
+body{
+  
+    margin: 0;
+    font-family: "helvetica neue", sans-serif;
+}
+.row1{
+    background-color: #f1f1f1;
+}
+.container{
+    display: flex;
+    
+}
+.container:after{
+    content: "";
+    display: table;
+    clear: both;
+}
+.left{
+    width: 25%;
+    padding: 10px;
+}
+.right{
+    width: 75%;
+    padding: 10px;
+}
+.column{
+    float: left;
+}
+.responsive{
+    width: 100%;
+    height: auto;
+}
+/********* sidebar********************/
+.sidbar1{
+    height: 100%;
+    width: 100%;
+}
+#avatar{
+    width: 100%;
+    margin: 5px;
+}
+/**************** Header*********************/
+ .header-row{
+     display: block;
+     background-color: #f1f1f1;
+ }
+ .nav {
+     text-align: right;
+     height: 70px;
+     line-height: 70px;
+     display: inline-block;
+     z-index: 1;
+ }
+ .menu{
+     margin: 0 30px 0 0;
+ }
+ .menu a{
+     clear: right;
+     text-decoration: none;
+     color: gray;
+     line-height: 70px;
+     display: inline-block;
+     font-size: 20px;
+     line-height: 20px;
+     padding: 6px 12px;
+     margin: 8px 8px;
+     vertical-align: middle;
+ }
+ .menu  li{
+     float: none;
+     display: inline;
+ }
+ 
+ .menu li a:hover{
+     background: -webkit-gradient(linear, center top, center bottom, from(#ededed), to(#fff));
+     background-image: linear-gradient(#ededed, #fff);
+     border-radius: 12px;
+     box-shadow: inset 0px 0px 1px 1px rgba(0,0,0,0.1);
+     color: #222;
+ }
+ 
+ label{
+     margin: 0 40px 0 0;
+     font-size: 26px;
+     line-height: 70px;
+     display: none;
+     width: 26px;
+     float: right; 
+ }
+ #toggle{
+     display: none;
+     float: right;
+ }
+ /****************** projects Row **************************/
+ .projects-row{
+    background-color: #f1f1f1!important;
+ }
+section{
+    padding: 30px 10px;
+    margin: 0 auto;
+    overflow: auto;
+   /* display: flex;*/
+}
+
+a.view_project, button{
+    background-color: #6a8cc9;
+    border: 1px solid #6a8cc9;
+    color: #fff;
+}
+a.button, button{
+    font: 18px/40px proxima-nova-soft,"Open Sans","Gill Sans MT","Gill Sans",Arial,sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    text-decoration: none;
+    letter-spacing: .01em;
+    padding: 0 40px;
+    display: inline-block;
+    height: 40px;
+    border-radius: 21px;
+    transition: background-color .2s;
+}
+.project-div{
+    margin-top: 100px;
+    width:35%;
+    text-align: center;
+}
+.project-img{
+    border-radius: 3px;
+    width: 60%;
+}
+.project-to-right .project-img{
+    float: right;
+}
+.project-to-right .project-div{
+    padding-left: 10px;
+}
+.project-to-left .project-img{
+    float: left;
+}
+.project-to-left .project-div{
+    padding-left: 30px; 
+}
+footer{
+    display: flex;
+    margin: 0 auto;
+    text-align: center;
+    background-color: #f1f1f1;
+    margin: 5px;
+    padding-bottom: 10px;
+}
+p.copyright{
+    font-size: 15px;
+    line-height: 50px;
+    width: 30%;
+    margin: 0;
+    padding: 10px;
+}
+.social-media{
+    width: 60%;
+    margin-top: 27px;
+    padding: 10px;
+    text-align: center;
+}
+ a.social{
+    text-decoration: none;
+    display: inline-block;
+    list-style: none;
+    color:black;
+    font-family: 'zocial', sans-serif;
+    text-shadow: 3px 3px 3px #aaa;
+    width: 2.5em;
+    font-size: 1.5em;
+}
+/*................... Nexuse 5...........................*/
+
+@media screen and (max-width: 500px){
+    .container{
+        display: block;  
+    }
+    footer{
+        display: block;
+    }
+    body{
+        background-color: #f1f1f1;
+    }
+    .sidbar1{
+        display: block;
+        width: 100%;
+        padding: 0;
+        margin: 0;
+        text-align: center;
+        background-color: #fff;
+    }
+    .row1{
+        padding-top: 5px;
+        margin-top: 5px;
+    }
+    .left, .right, .column, .project-div, .project-img{
+        width: 100%;
+        display: block;
+    }
+    .header-row{
+        width: 45%;
+        float: right;
+    }
+    .sign{
+        width: 45%;
+        padding: 0;
+    }
+    p.copyright, .social-media{
+        width: 100%;
+        padding: 0;
+    }
+    .project-to-right .project-img{
+        float: none;
+    }
+    .project-to-right .project-div{
+        float: none;
+        padding-left: 0;
+    }
+    .project-to-left .project-img{
+        float: none;
+    }
+    .project-to-left .project-div{
+        float: none;
+        padding-left: 0; 
+    }
+    #avatar{
+        width: 80%;
+        height: 50%;
+        float: none;
+        margin: 0px;
+        margin-top: 10px;
+        padding: 0;
+    }
+    label{
+        display: block;
+        cursor: pointer;
+    }
+    .menu{
+        text-align: center;
+        width: 100%;
+        display: none;
+    }
+    .menu a{
+        display: block;
+        border-bottom: 2px solid #fff;
+        margin: 0;
+    }
+    #toggle:checked + .menu{
+       display: block;
+       z-index: 1;
+       max-height: fit-content;
+    }
+    header{
+        text-align: right;
+    }
+    #nav-img{
+        display: none;
+    }
+    footer{
+        display: block;
+    }
+}
+/*................Apple Tablet..............................*/
+
+@media screen and (min-width: 500px) and (max-width: 800px){
+    .container{
+        display: block;
+    }
+    body{
+        background-color: #f1f1f1;
+       
+    }
+    .sidbar1{
+        display: block;
+        width: 100%;
+        padding: 0;
+        background-color: #fff;
+    }
+    .row1{
+        padding-top: 5px;
+        margin-top: 30px;
+        }
+    .left, .right, .column, .project-div, .project-img{
+        width: 100%;
+        display: block;
+        padding: 0;
+    }
+    #avatar{
+        width: 50%;
+        float: left;
+        margin: 0px;
+        padding: 0;
+        max-height: 400px;
+    }
+    .info{
+        display: block;
+        padding: 10px;
+        text-align: center;
+        margin-left: 10px;
+        font-size: 1.5em;
+    }
+    p.copyright, .social-media{
+        width: 100%;
+        padding: 0;
+        font-size: 1.5em;
+    }
+    section{
+        display: block;
+    }
+    footer{
+        margin-top: 30px;
+        display: block;
+    }
+    #nav-img{
+        display: none;
+    }
+    .project-div{
+        font-size: 2em;
+        line-height: 40px;
+    }
+    .project-to-right .project-img{
+        float: none;
+    }
+    .project-to-right .project-div{
+        float: none;
+        padding-left: 0;
+    }
+    .project-to-left .project-img{
+        float: none;
+    }
+    .project-to-left .project-div{
+        float: none;
+        padding-left: 0; 
+    }
+    .menu a{
+        font-size: 2em;
+        float: left;
+        margin: 1px;
+        padding: 15px;
+    }
+    .nav{
+        text-align: center;
+    }
+    a.button, button{
+        font-size: 1em;
+        height: 60px;
+        border-radius: 30px;
+        padding: 10px 50px;
+    }
+    
+    .header-row{
+        width: 70%;
+        text-align: left;
+        float: right;
+        justify-content: center;  
+    }
+    header{
+        float: right;
+    }
+    .sign{
+        width: 25%;
+        margin: 5px;
+        padding: 0;
+    }
+    .nav{
+        text-align: center;
+        height: 70px;
+        line-height: 70px;
+        z-index: 1;
+    }
+    .menu{
+        margin:0;
+    }
+    .menu a{
+        clear: right;
+        line-height: 70px;
+        display: inline-block;
+        font-size: 33px;
+        line-height: 25px;
+        padding: 0;
+        margin: 8px 8px;
+    }
+    li, ul{
+        padding: 0;
+        margin: 0;
+        -webkit-padding-start: 0;
+    }
+}
